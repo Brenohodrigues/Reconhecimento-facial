@@ -1,0 +1,16 @@
+opencv-python==4.10.0.84
+face_recognition==1.3.0
+numpy<2.0
+bcrypt==4.2.0
+SQLAlchemy==2.0.35
+Pillow==10.4.0
+
+# O pacote face_recognition_models (dependência do face_recognition) ainda
+# usa pkg_resources internamente. A partir da versão 82, o setuptools
+# removeu esse módulo, então fixamos uma versão anterior para evitar o erro
+# "ModuleNotFoundError: No module named 'pkg_resources'".
+setuptools<81
+
+# Observação: face_recognition depende da biblioteca dlib, que precisa
+# de um compilador C++ (cmake) instalado no sistema operacional, OU de um
+# wheel pré-compilado (veja instruções no README para Windows).
